@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +61,7 @@
 
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input id="email" type="text" class="form-control" name="email" required autofocus>
+                    <input id="email" type="text" class="form-control" name="user_email" required autofocus>
                    
                   </div>
 
@@ -133,13 +132,5 @@
         alert('Password Not Matched')
         return false;
       }
-
-
-
     }
-
-    
-
-  
-
 </script>

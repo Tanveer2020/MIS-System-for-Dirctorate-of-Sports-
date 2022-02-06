@@ -76,7 +76,7 @@
                             
                             <div class="form-group">
                                   <label>District Name</label>
-                                  <input type="text" class="form-control" placeholder="District Name" name="district_name" required>
+                                  <input type="text" class="form-control" placeholder="District Name" name="district_name" maxlength="30" onkeyup="this.value=this.value.replace(/[^A-Za-z\s]/g,'');" required>
                                   
                                 </div>
 
@@ -110,7 +110,7 @@
                                     <i class="fas fa-user"></i>
                                 </div>
                                 </div>
-                                <input type="text" class="form-control" placeholder="District Name" name="district_name" id="edit_district_name" required >
+                                <input type="text" class="form-control" placeholder="District Name" name="district_name" id="edit_district_name" maxlength="30" onkeyup="this.value=this.value.replace(/[^A-Za-z\s]/g,'');" required >
                             </div>
                             </div>
                             <div class="form-group">
@@ -184,15 +184,15 @@
             </div>
         </div>
       <script>
-          function districts_update(district_id)		{
-			$.ajax({
-				url: 'admin/districts_edit_model/'+district_id,
-				dataType: 'json',
-				success: function(response){ 
-					$('#edit_district_name').val(response.district_name);
+          function districts_update(district_id)        {
+            $.ajax({
+                url: 'admin/districts_edit_model/'+district_id,
+                dataType: 'json',
+                success: function(response){ 
+                    $('#edit_district_name').val(response.district_name);
           $('#edit_district_id').val(response.district_id); 
           $('#edit_district_status option[value="' + response.district_status + '"]').prop('selected', true);
-				}
-			});
-		}
+                }
+            });
+        }
       </script>

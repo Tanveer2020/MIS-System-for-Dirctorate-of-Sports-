@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,20 +20,19 @@
   <link rel='shortcut icon' type='image/x-icon'  href='assets/img/logo/logo-icon.png' />
 </head>
 
-<body>
+<body style="background: #15693f;">
   <div class="loader"></div>
   <div id="app" >
     <section class="section" >
       <div class="container mt-5">
         <div class="row">
-          <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-            <div class="card card-primary">
-              <div class="card-header">
-                <div class="col-md-4 offset-sm-4">
-                 <img alt="image" src="assets/images/DG sports logo.png"  style="height:100px;width:100px;"/> 
-               </div>
-              </div>
-              <div class="card-body" >
+          <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2" style="margin-top: 80px;">
+              <div class="row"style="padding:0px;border-radius:40px;box-shadow:10px 10px 100px #00000082">
+                <div class="col-xl-7" style="padding:0px;margin:0px;">
+                <img src="assets/images/Group_1809.png" style="width:100% !important;height:100%; ">
+                  </div>
+
+                  <div class="col-xl-5" style="background: #fff;border-radius:0px 40px 40px 0px;">
                     <!-- start messages --->
                     <div style="text-align: center">
                     <?php if($feedback =$this->session->flashdata('feedback')){
@@ -51,24 +51,25 @@
                     </div>  
                     <!-- end of messages  --->
            
-                <form method="POST" action="<?= base_url('Athletes/login_user')?>" class="needs-validation" novalidate="">
+                <form method="POST" action="<?= base_url('Athletes/login_user')?>" class="needs-validation" novalidate="">                  
+                  <p style="color:#15693F; font-weight: bold;text-align: center;margin-top:60px;font-size:22px;">Login your account</p>
                   <div class="form-group">
-                    <label for="email">Useremail</label>
-                    <input id="email" type="email" class="form-control" name="user_email" tabindex="1" required autofocus>
+                    <label for="email"><strong>Useremail</strong></label>
+                    <input id="email" type="email" class="form-control" name="ath_email" tabindex="1"  required autofocus>
                     <div class="invalid-feedback">
                       Please fill in your Username
                     </div>
                   </div>
                   <div class="form-group">
                       <div class="d-block">
-                      <label for="password" class="control-label">Password</label>
+                      <label for="password" class="control-label"><strong>Password</strong></label>
                       <!-- <div class="float-right">
                       <a href="auth-forgot-password.html" class="text-small">
                       Forgot Password?
                       </a>
                       </div> -->
                       </div>
-                    <input id="password" type="password" class="form-control" name="user_password" tabindex="2" required>
+                    <input id="password" type="password" class="form-control" name="ath_password" tabindex="2" required>
                       <div class="invalid-feedback">
                       please fill in your password
                       </div>
@@ -79,13 +80,14 @@
                       <label class="custom-control-label" for="remember-me">Remember Me</label>
                     </div>
                   </div> -->
-                   <div class="col-md-4 offset-sm-4">
+                   <div class="col-md-6 offset-sm-3">
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block text-center"  tabindex="4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block text-center" style="border-radius:50px" tabindex="4">
                       Login
                     </button>
                   </div>
                 </div>
+                <br>
 
                 <div class="row sm-gutters">
                       <div class="col-6">
@@ -100,8 +102,7 @@
                       </div>
                 </div>
                 </form>
-                
-              </div>
+            </div>
             </div>
              <!-- <div class="mt-5 text-muted text-center">
               Don't have an account? <a href="auth-register.html">Create One</a>
